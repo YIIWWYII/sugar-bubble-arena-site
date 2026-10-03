@@ -1,0 +1,59 @@
+/* 糖泡对战 | 二次开发与维护：WY | 官方项目：https://github.com/YIIWWYII/sugar-bubble-arena | 第三方权利见 NOTICE.md */
+.app,dialog{cursor:url('./assets/cursor-fight.png') 1 1,auto}
+.app button,dialog button,.app select,dialog label{cursor:url('./assets/cursor-hand.png') 4 4,pointer}
+.app input,dialog input{cursor:text}
+.chat-panel{position:absolute;left:1.5%;bottom:10.3%;width:73%;z-index:6;pointer-events:none;color:#e9faff;font-size:15px;text-shadow:0 1px 2px #082842}
+.chat-log{max-height:130px;overflow:hidden;line-height:1.6;padding:3px 6px}
+.chat-message{overflow-wrap:anywhere;animation:chat-fade 18s forwards}
+.chat-message strong{font-weight:700;color:#ffe891;margin-right:7px}
+.chat-panel.typing .chat-log{background:#082b45c9;border-radius:4px 4px 0 0;overflow-y:auto;pointer-events:auto}
+.chat-panel.typing .chat-message{animation:none}
+#chat-form{display:flex;align-items:center;gap:6px;padding:5px;background:#d4f1fc;border:1px solid #5698b7;border-radius:3px;pointer-events:auto;text-shadow:none}
+#chat-form span{font-size:13px;color:#397ca1;padding:0 3px;white-space:nowrap}
+#chat-input{flex:1;padding:7px 8px;font-size:15px;height:34px;min-width:0}
+#chat-form button{min-height:34px;padding:5px 9px}
+@keyframes chat-fade{0%,65%{opacity:1}100%{opacity:.3}}
+@media(max-width:760px){.chat-panel{font-size:13px}.chat-log{max-height:96px}.toolbar-actions{flex-wrap:wrap}}
+body,button,input,select{font-family:'Fusion Pixel','Microsoft YaHei',sans-serif}
+#death-screen{background:transparent;color:#eff8ff}
+#death-cry-overlay{display:none}
+#death-screen strong{font-family:'Fusion Pixel','Microsoft YaHei',sans-serif;letter-spacing:2px}
+#death-cry-overlay{position:absolute;width:16.6667%;height:auto;pointer-events:none}
+.credit{font-size:13px}
+.ai-controls{display:flex;align-items:center;gap:8px;margin-top:12px;flex-wrap:wrap}
+.ai-controls label{font-weight:bold;color:#234b71}
+.ai-controls select{flex:1;min-width:150px;padding:8px;border:1px solid #88b3cc;border-radius:6px}
+.ai-controls button{padding:8px 12px}
+#home-panel{max-height:96%;overflow-y:auto}
+.career-strip{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#d1ecf8;border:1px solid #9dcbdf;border-radius:5px;padding:8px;margin-bottom:12px;font-size:12px}
+.career-strip button{white-space:nowrap}
+.map-preview{display:flex;align-items:center;gap:12px;margin:8px 0 12px;background:#cce9f4;border:1px solid #9cc9d8;padding:8px;border-radius:5px}
+.map-preview canvas{width:75px;height:65px;border:1px solid #679ba9;image-rendering:pixelated;flex-shrink:0}
+.map-preview b{color:#225b80;font-size:14px}.map-preview p{margin:4px 0;font-size:12px}.map-preview small{font-size:10px;color:#52768b}
+#home-panel{width:460px;max-height:96%;scrollbar-width:thin}
+#home-panel .window-content{padding:16px 20px}#home-panel .public-rooms{min-height:65px;max-height:95px}#home-panel .empty-lobby{margin:10px 0}
+#home-panel .divider{margin:12px 0}
+.career-dialog{width:min(820px,94vw);max-height:90vh}.career-dialog .window-title{position:sticky;top:0;z-index:2}.career-dialog .window-content{padding:20px}
+.career-hero{display:flex;align-items:center;gap:14px;padding:4px 14px 16px;border-bottom:1px solid #9dc9dc}
+.career-hero img{width:90px;height:90px;object-fit:contain;image-rendering:pixelated;background:radial-gradient(ellipse,#fff5b8,transparent 70%)}
+.career-hero h2{margin:0;font-size:20px}.career-hero h2 span{font-size:15px;color:#b57620}.career-hero p{margin:4px 0}.career-hero strong{margin-left:auto;color:#91651d;background:#fff4cf;border:1px solid #d9bd73;padding:10px;border-radius:5px;font-size:13px}
+.career-hero progress{height:12px;width:130px;accent-color:#39a8d1;margin-right:8px}.career-hero small{font-size:11px}
+.attribute-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.skill-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.growth-card{padding:12px;background:linear-gradient(#f2fcff,#d7edf7);border:1px solid #91bed4;border-radius:5px;box-shadow:inset 0 1px #fff;display:flex;flex-direction:column;gap:6px}
+.growth-card.equipped{border-color:#c19c3d;box-shadow:inset 0 0 0 1px #f9e4a0;background:linear-gradient(#fffce8,#edf6f0)}
+.growth-heading{display:flex;align-items:center;gap:10px;min-height:46px}.growth-heading div{display:flex;flex-direction:column;gap:5px}.growth-heading b{font-size:15px}.growth-heading span:not(.career-icon){font-size:11px;color:#668299}
+.career-icon{display:inline-block;background-repeat:no-repeat;flex-shrink:0;image-rendering:pixelated}
+.growth-card p{line-height:1.6;margin:3px 0;font-size:12px}.growth-card small{font-size:11px;line-height:1.6;color:#45697f}
+.growth-card>button{margin-top:auto}.growth-actions{margin-top:auto;display:flex;gap:6px;padding-top:7px;flex-wrap:wrap}.growth-actions .practice-button{padding:6px 10px;font-size:12px}
+.career-section-title{display:flex;justify-content:space-between;align-items:center;gap:10px}.career-section-title span{font-size:12px;color:#986d20}
+.career-note{color:#53738a!important;font-size:11px!important}.career-dialog button:disabled{opacity:.55;cursor:not-allowed}
+#round-reward{padding:12px;background:#fff0bd;border:1px solid #d8b357;border-radius:4px;color:#855a14;font-size:13px;line-height:1.7}#result-home{width:100%;margin-top:10px}
+#combat-tools{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);z-index:20;display:grid;grid-template-columns:minmax(170px,1.25fr) minmax(190px,1.35fr) auto;grid-template-areas:'identity vitals actions' 'identity buff bombs' 'objective objective objective';align-items:center;gap:8px 14px;padding:11px 15px;background:linear-gradient(135deg,#103650f5,#164b6aef);border:1px solid #7fd4e7;border-radius:12px;box-shadow:0 8px 28px #001b3a8c,0 1px 0 #d4f7ff55 inset;max-width:min(1060px,94vw);width:min(1060px,94vw);color:#e6faff;backdrop-filter:blur(10px)}
+#combat-tools[hidden]{display:none}.hud-identity{grid-area:identity;display:flex;align-items:center;gap:10px;min-width:0}.hud-role-mark{width:42px;height:42px;display:grid;place-items:center;border-radius:10px;background:#38b8dd;color:#07314c;font-weight:900;font-size:22px;box-shadow:0 0 0 2px #d5f6ff66}.hud-identity strong,.hud-identity span,.hud-identity small{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.hud-identity strong{font-size:16px;color:#fff}.hud-identity span{font-size:11px;color:#9de1f3;margin-top:2px}.hud-identity small{font-size:10px;color:#c9e9f3;margin-top:4px}.hud-vitals{grid-area:vitals;min-width:0}.hud-vitals-head{display:flex;justify-content:space-between;font-size:11px;color:#bce7f4;margin-bottom:5px}.hud-vitals-head b{color:#fff}.hud-hp-track{height:8px;border-radius:8px;background:#062334;overflow:hidden;border:1px solid #4e8598}.hud-hp-track i{display:block;width:100%;height:100%;background:linear-gradient(90deg,#45d890,#b9ef74);transition:width .18s,background .18s}.hud-stats{display:flex;gap:10px;margin-top:5px;color:#9fc8d8;font-size:10px;white-space:nowrap}.hud-actions{grid-area:actions;display:flex;gap:6px}.hud-action{min-height:34px;padding:6px 10px;font-size:11px;white-space:nowrap}.hud-buff{grid-area:buff;min-height:18px;font-size:10px;color:#ffd978;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.hud-bombs{grid-area:bombs;display:flex;align-items:center;gap:6px;min-width:0}.hud-bombs #bomb-description{font-size:10px;line-height:1.35;color:#bde9fa;max-width:220px}.hud-objective{grid-area:objective;display:flex;gap:9px;align-items:baseline;border-top:1px solid #75bfd533;padding-top:6px;min-width:0}.hud-objective span{font-size:10px;color:#83bbd0;letter-spacing:1px}.hud-objective strong{font-size:11px;color:#f6e39a;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+@media(max-width:760px){#home-panel{width:420px}.career-hero{padding:0 0 12px;gap:8px;flex-wrap:wrap}.career-hero strong{margin:0;width:100%}.career-hero img{width:70px;height:70px}.attribute-grid{grid-template-columns:1fr}.career-dialog .window-content{padding:12px}.growth-card{padding:10px}.career-section-title{flex-wrap:wrap;gap:0}.skill-grid{grid-template-columns:1fr}.career-hero h2{font-size:18px}#combat-tools{bottom:8px;gap:6px;padding:8px;grid-template-columns:1fr 1fr;grid-template-areas:'identity vitals' 'actions actions' 'buff buff' 'bombs bombs' 'objective objective';width:calc(100vw - 16px);max-width:calc(100vw - 16px)}.hud-actions,.hud-bombs{justify-content:center;flex-wrap:wrap}.hud-bombs #bomb-description{max-width:170px}#buff-status{font-size:10px}}
+
+#combat-tools{flex-wrap:wrap;justify-content:center}#bio-antidote{white-space:nowrap;flex-shrink:0;font-size:13px;padding:8px 12px}
+
+#kill-feed{position:absolute;right:25%;top:12px;z-index:12;width:min(310px,40%);display:flex;flex-direction:column;gap:5px;pointer-events:none;font:12px "Fusion Pixel",sans-serif}#kill-feed[hidden]{display:none}.kill-notice{display:flex;justify-content:flex-end;align-items:center;gap:9px;background:#123b58dc;border-right:3px solid #7ddbed;padding:7px 10px;color:#ecfaff}.kill-notice b{max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.kill-notice span{font-size:10px;color:#9ed6e6;white-space:nowrap}.kill-notice[data-self=true]{border-color:#ffda66}.kill-notice[data-self=true] b{color:#ffe589}
+#infection-alert{position:absolute;top:14px;left:18px;z-index:13;width:220px;box-sizing:border-box;padding:12px;background:#113b54e8;border:2px solid #f2bf64;color:#fff0bb;font:12px "Fusion Pixel",sans-serif;pointer-events:none}#infection-alert[hidden]{display:none}#infection-countdown{display:block;font-size:30px;line-height:1.4;color:#ffe17a}.infection-track{height:6px;background:#092438;margin:4px 0 9px}.infection-track i{display:block;height:100%;background:#ffd66e}#infection-alert small{font-size:11px}#infection-alert[data-urgent=true]{border-color:#ff7979;color:#ffcece}#infection-alert[data-urgent=true] strong{color:#ff9393}#infection-alert[data-urgent=true] i{background:#ff7979}
+@media(max-width:600px){#kill-feed{top:5px;gap:3px;width:45%;font-size:9px}.kill-notice{gap:4px;padding:4px}.kill-notice span{font-size:8px}#infection-alert{top:auto;bottom:17%;left:8px;width:165px;padding:8px;font-size:10px}#infection-countdown{font-size:22px}#infection-alert small{font-size:9px}}
